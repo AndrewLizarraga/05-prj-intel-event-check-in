@@ -25,7 +25,8 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(
+  background:
+    linear-gradient(
       135deg,
       rgba(0, 153, 219, 0.9) 0%,
       rgba(0, 104, 181, 0.9) 50%,
@@ -348,6 +349,65 @@ select {
   color: #475569;
 }
 
+/* Attendee list */
+.attendee-list {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 2px solid #f1f5f9;
+  text-align: left;
+}
+
+.attendee-list h3 {
+  color: #64748b;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.attendee-list-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.attendee-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+.attendee-name {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.attendee-team {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.team-water {
+  color: #0369a1;
+  background-color: #e0f2fe;
+}
+
+.team-zero {
+  color: #166534;
+  background-color: #dcfce7;
+}
+
+.team-power {
+  color: #92400e;
+  background-color: #ffedd5;
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
   .hero {
@@ -356,9 +416,25 @@ select {
   .hero h1 {
     font-size: 38px;
   }
+  .hero p {
+    font-size: 18px;
+  }
   .container {
-    padding: 32px;
-    margin: 0 15px 30px;
+    padding: 20px;
+    margin: 0 12px 24px;
+  }
+
+  .check-in {
+    padding: 20px;
+  }
+
+  .attendance-tracker {
+    padding: 0 12px;
+    margin-bottom: 28px;
+  }
+
+  .progress-container {
+    max-width: 100%;
   }
 
   .form-group {
@@ -380,5 +456,42 @@ select {
 
   .teams-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  .attendance-tracker {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 12px;
+  }
+
+  .form-group {
+    gap: 12px;
+  }
+
+  .input-wrapper,
+  input,
+  select,
+  button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .attendee-list-items {
+    max-height: 240px;
+    overflow-y: auto;
+    padding-right: 4px;
   }
 }
